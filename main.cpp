@@ -66,6 +66,7 @@ int minimax(bool isComputerTurn) {
     char winner = checkWinner();
     if (winner == COMPUTER) return 1;
     if (winner == PLAYER) return -1;
+    if (isBoardFull()) return 0;
 
     int bestScore = isComputerTurn ? -1000 : 1000;
 
